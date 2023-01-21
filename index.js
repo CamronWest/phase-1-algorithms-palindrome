@@ -1,13 +1,20 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const backardsString = word.split("").reverse().join("");
+  return word === backardsString ? true : false;
 }
 
 /* 
-  Add your pseudocode here
+  Need algorithm that loops through a string and gathers information on each characater in the string.
+
+    iterate over each Char in a string:
+      if word === wordbackwards:
+        return true else false
 */
 
 /*
-  Add written explanation of your solution here
+  isPalindrome iterates through a string and grabs each charater using the builtin split function and 
+  then reverses the string using the built in reverse function. Finally rejoins the string using the join function and returns
+  if the word is a palindrome or not.
 */
 
 // You can run `node index.js` to view these console logs
@@ -23,3 +30,5 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+
